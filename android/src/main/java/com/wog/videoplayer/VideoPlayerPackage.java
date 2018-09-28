@@ -19,7 +19,8 @@ public class VideoPlayerPackage implements ReactPackage {
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return Arrays.<NativeModule>asList(new VideoPlayerModule(reactContext));
     }
-    
+
+
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.emptyList();
