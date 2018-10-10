@@ -24,7 +24,6 @@ RCT_EXPORT_METHOD(showVideoPlayer: (NSString*) url)
     _playerViewController.player = player;
     _playerViewController.showsPlaybackControls = YES;
 
-
     dispatch_async(dispatch_get_main_queue(), ^{
 
         [delegate.window.rootViewController.view addSubview:self.playerViewController.view];
@@ -33,6 +32,11 @@ RCT_EXPORT_METHOD(showVideoPlayer: (NSString*) url)
     });
 
     _playerViewController.player.play;
+}
+
++ (BOOL)requiresMainQueueSetup
+{
+    return NO;
 }
 
 @end
